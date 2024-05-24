@@ -15,7 +15,7 @@ const NavbarContainer = styled.div`
 const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <NavbarContainer>
-      <h2>Take Home Assigmnent</h2>
+      <h2>Take Home Assignment</h2>
       <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
     </NavbarContainer>
   );
