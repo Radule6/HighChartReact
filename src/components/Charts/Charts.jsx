@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { themes } from "../../themes/highgraphsTheme";
-import AreaChart from "./AreaChart";
+import { themes } from "../../themes/highChartThemes";
+import LineChart from "./LineChart";
+import PieChart from "./PieChart";
 
 const Container = styled.div`
   width: 1000px;
@@ -26,14 +27,14 @@ const ChartContainer = styled.div`
 `;
 
 const ThemeSelect = styled.select`
-  background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 10px;
-
+  color: ${(props) => props.theme.color};
+  background-color: ${(props) => props.theme.bg};
   &:focus {
     outline: none;
     border-color: blue;
@@ -41,7 +42,7 @@ const ThemeSelect = styled.select`
 `;
 
 const Charts = () => {
-  const [chartTheme, setChartTheme] = useState("pastel");
+  const [chartTheme, setChartTheme] = useState("dark");
 
   const handleThemeChange = (event) => {
     setChartTheme(event.target.value);
@@ -59,9 +60,8 @@ const Charts = () => {
         </ThemeSelect>
       </div>
       <ChartContainer>
-        <AreaChart clasName="" chartTheme={chartTheme} />
-        <AreaChart clasName="" chartTheme={chartTheme} />
-        {/* <AreaChart clasName="" chartTheme={chartTheme} /> */}
+        <LineChart chartTheme={chartTheme} />
+        <PieChart chartTheme={chartTheme} />
       </ChartContainer>
     </Container>
   );

@@ -26,7 +26,7 @@ body {
   height: 100vh;
   width: 100%;
   height: 100%;
-  background-color: #fafafa;
+  background-color: #f5f1f1;
   font-family: var(--font-family);
 }
 img,
@@ -58,10 +58,3 @@ h6 {
 #__next {
   isolation: isolate;
 }
-
-/* #root {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-} */

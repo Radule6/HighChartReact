@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { DarkModeButton } from "..";
+import { DarkModeButton } from "../";
 const NavbarContainer = styled.div`
   width: 100%;
   padding: 20px;

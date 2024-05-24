@@ -1,8 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { ThemeProviderComponent, Navbar } from "./components";
-import Charts from "./components/Charts/Charts";
+import { ThemeProviderComponent, Navbar, Charts } from "./components";
 
+/*
+Since most components in this example are very small and maintainable, I decided to put the styles of the components in the same file because it was easier to navigate because of the small size of the components
+*/
 const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
